@@ -40,6 +40,20 @@
 		BC1A1A241A1A1A1A1A1A1A24 /* hellotetrisUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hellotetrisUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXBuildFile section */
+		BC1A1A1B1A1A1A1A1A1A1A1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1A1A1B1A1A1A1A1A1A1A1B /* AppDelegate.swift */; };
+		BC1A1A1E1A1A1A1A1A1A1A1F /* GameBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1A1A1E1A1A1A1A1A1A1A1E /* GameBoard.swift */; };
+		BC1A1A201A1A1A1A1A1A1A21 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1A1A201A1A1A1A1A1A1A20 /* GameScene.swift */; };
+		BC1A1A211A1A1A1A1A1A1A22 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1A1A211A1A1A1A1A1A1A21 /* GameViewController.swift */; };
+		BC1A1A1A1A1A1A1A1A1A1A1C /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = BC1A1A1A1A1A1A1A1A1A1A1A /* Actions.sks */; };
+		BC1A1A1C1A1A1A1A1A1A1A1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC1A1A1C1A1A1A1A1A1A1A1C /* Assets.xcassets */; };
+		BC1A1A1D1A1A1A1A1A1A1A1E /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = BC1A1A1D1A1A1A1A1A1A1A1D /* Base.lproj */; };
+		BC1A1A1F1A1A1A1A1A1A1A20 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = BC1A1A1F1A1A1A1A1A1A1A1F /* GameScene.sks */; };
+		BC1A1A221A1A1A1A1A1A1A23 /* hellotetrisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1A1A221A1A1A1A1A1A1A22 /* hellotetrisTests.swift */; };
+		BC1A1A231A1A1A1A1A1A1A24 /* hellotetrisUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1A1A231A1A1A1A1A1A1A23 /* hellotetrisUITests.swift */; };
+		BC1A1A241A1A1A1A1A1A1A25 /* hellotetrisUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1A1A241A1A1A1A1A1A1A24 /* hellotetrisUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFrameworksBuildPhase section */
 		BCEBF7F12E2B06E300DFF723 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
@@ -228,6 +242,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC1A1A1A1A1A1A1A1A1A1A1C /* Actions.sks in Resources */,
+				BC1A1A1C1A1A1A1A1A1A1A1D /* Assets.xcassets in Resources */,
+				BC1A1A1D1A1A1A1A1A1A1A1E /* Base.lproj in Resources */,
+				BC1A1A1F1A1A1A1A1A1A1A20 /* GameScene.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +270,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC1A1A1B1A1A1A1A1A1A1A1C /* AppDelegate.swift in Sources */,
+				BC1A1A1E1A1A1A1A1A1A1A1F /* GameBoard.swift in Sources */,
+				BC1A1A201A1A1A1A1A1A1A21 /* GameScene.swift in Sources */,
+				BC1A1A211A1A1A1A1A1A1A22 /* GameViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC1A1A221A1A1A1A1A1A1A23 /* hellotetrisTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +289,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC1A1A231A1A1A1A1A1A1A24 /* hellotetrisUITests.swift in Sources */,
+				BC1A1A241A1A1A1A1A1A1A25 /* hellotetrisUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
