@@ -14,21 +14,49 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: Select Xcode Version
-      run: sudo xcode-select --switch /Applications/Xcode_15.4.app/Contents/Developer
+    - name: List Available Xcode Versions
+      run: ls /Applications/ | grep Xcode
+
+    - name: Select Latest Xcode
+      run: |
+        if [ -d "/Applications/Xcode_15.4.app" ]; then
+          sudo xcode-select -s /Applications/Xcode_15.4.app/Contents/Developer
+        elif [ -d "/Applications/Xcode_15.2.app" ]; then
+          sudo xcode-select -s /Applications/Xcode_15.2.app/Contents/Developer
+        else
+          sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
+        fi
 
     - name: Show Xcode Version
       run: xcodebuild -version
 
-    - name: Show SDK Location
-      run: xcodebuild -showsdks
+    - name: Clean Derived Data
+      run: rm -rf ~/Library/Developer/Xcode/DerivedData/*
+
+    - name: Show Available Destinations
+      run: xcodebuild -project hellotetris.xcodeproj -scheme hellotetris -showdestinations
 
     - name: Build and Test
       run: |
+        # First try with clean build
         xcodebuild clean build test \
           -project hellotetris.xcodeproj \
           -scheme hellotetris \
-          -destination 'platform=iOS Simulator,name=iPhone 15' \
+          -destination 'platform=iOS Simulator,name=iPhone 16' \
+          -derivedDataPath ./build \
+          -allowProvisioningUpdates \
           CODE_SIGN_IDENTITY="" \
           CODE_SIGNING_REQUIRED=NO \
-          CODE_SIGNING_ALLOWED=NO
+          CODE_SIGNING_ALLOWED=NO \
+          | tee build.log || {
+            echo "Build failed, trying alternative approach..."
+            xcodebuild -version
+            xcodebuild -project hellotetris.xcodeproj -list
+            xcodebuild clean build \
+              -project hellotetris.xcodeproj \
+              -scheme hellotetris \
+              -destination 'platform=iOS Simulator,name=iPhone 16' \
+              CODE_SIGN_IDENTITY="" \
+              CODE_SIGNING_REQUIRED=NO \
+              CODE_SIGNING_ALLOWED=NO
+          }
