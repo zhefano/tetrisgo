@@ -1,0 +1,49 @@
+# SwiftLint Configuration for Tetris Game - Very Lenient
+
+disabled_rules:
+  - trailing_whitespace # Ignore whitespace issues
+  - line_length # Allow long lines
+  - identifier_name # Allow short names like x, y
+  - type_name # Allow any naming convention
+  - redundant_discardable_let
+  - for_where
+  - control_statement
+  - implicit_getter
+  - redundant_sendable
+  - unneeded_synthesized_initializer
+  - vertical_whitespace
+  - trailing_newline
+  - function_body_length # Allow long functions for game logic
+  - type_body_length # Allow large classes for game engines
+  - file_length # Allow large files
+  - cyclomatic_complexity # Allow complex game logic
+  - static_over_final_class
+
+# Only include the most basic opt-in rules
+opt_in_rules:
+  - empty_count
+
+# Include/exclude patterns
+included:
+  - hellotetris/
+  - hellotetrisTests/
+
+excluded:
+  - build/
+  - .build/
+  - DerivedData/
+  - hellotetris.xcodeproj/
+  - "*.generated.swift"
+
+# Very permissive configurations
+large_tuple:
+  warning: 6
+  error: 8
+
+nesting:
+  type_level:
+    warning: 5
+    error: 10
+
+# Custom reporter for GitHub Actions
+reporter: "github-actions-logging"
