@@ -27,13 +27,18 @@
 		BCEBF7F42E2B06E300DFF723 /* hellotetris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hellotetris.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCEBF80D2E2B06E600DFF723 /* hellotetrisTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hellotetrisTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCEBF8172E2B06E600DFF723 /* hellotetrisUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hellotetrisUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC1A1A1A1A1A1A1A1A1A1A1A /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		BC1A1A1B1A1A1A1A1A1A1A1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BC1A1A1C1A1A1A1A1A1A1A1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BC1A1A1D1A1A1A1A1A1A1A1D /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Base.lproj; sourceTree = "<group>"; };
+		BC1A1A1E1A1A1A1A1A1A1A1E /* GameBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBoard.swift; sourceTree = "<group>"; };
+		BC1A1A1F1A1A1A1A1A1A1A1F /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		BC1A1A201A1A1A1A1A1A1A20 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		BC1A1A211A1A1A1A1A1A1A21 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		BC1A1A221A1A1A1A1A1A1A22 /* hellotetrisTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hellotetrisTests.swift; sourceTree = "<group>"; };
+		BC1A1A231A1A1A1A1A1A1A23 /* hellotetrisUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hellotetrisUITests.swift; sourceTree = "<group>"; };
+		BC1A1A241A1A1A1A1A1A1A24 /* hellotetrisUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hellotetrisUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		BCEBF7F62E2B06E400DFF723 /* hellotetris */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = hellotetris; sourceTree = "<group>"; };
-		BCEBF8102E2B06E600DFF723 /* hellotetrisTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = hellotetrisTests; sourceTree = "<group>"; };
-		BCEBF81A2E2B06E600DFF723 /* hellotetrisUITests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = hellotetrisUITests; sourceTree = "<group>"; };
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		BCEBF7F12E2B06E300DFF723 /* Frameworks */ = {
@@ -80,6 +85,38 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		BCEBF7F62E2B06E400DFF723 /* hellotetris */ = {
+			isa = PBXGroup;
+			children = (
+				BC1A1A1A1A1A1A1A1A1A1A1A /* Actions.sks */,
+				BC1A1A1B1A1A1A1A1A1A1A1B /* AppDelegate.swift */,
+				BC1A1A1C1A1A1A1A1A1A1A1C /* Assets.xcassets */,
+				BC1A1A1D1A1A1A1A1A1A1A1D /* Base.lproj */,
+				BC1A1A1E1A1A1A1A1A1A1A1E /* GameBoard.swift */,
+				BC1A1A1F1A1A1A1A1A1A1A1F /* GameScene.sks */,
+				BC1A1A201A1A1A1A1A1A1A20 /* GameScene.swift */,
+				BC1A1A211A1A1A1A1A1A1A21 /* GameViewController.swift */,
+			);
+			path = hellotetris;
+			sourceTree = "<group>";
+		};
+		BCEBF8102E2B06E600DFF723 /* hellotetrisTests */ = {
+			isa = PBXGroup;
+			children = (
+				BC1A1A221A1A1A1A1A1A1A22 /* hellotetrisTests.swift */,
+			);
+			path = hellotetrisTests;
+			sourceTree = "<group>";
+		};
+		BCEBF81A2E2B06E600DFF723 /* hellotetrisUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BC1A1A231A1A1A1A1A1A1A23 /* hellotetrisUITests.swift */,
+				BC1A1A241A1A1A1A1A1A1A24 /* hellotetrisUITestsLaunchTests.swift */,
+			);
+			path = hellotetrisUITests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -94,9 +131,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				BCEBF7F62E2B06E400DFF723 /* hellotetris */,
 			);
 			name = hellotetris;
 			packageProductDependencies = (
@@ -118,9 +152,6 @@
 			dependencies = (
 				BCEBF80F2E2B06E600DFF723 /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				BCEBF8102E2B06E600DFF723 /* hellotetrisTests */,
-			);
 			name = hellotetrisTests;
 			packageProductDependencies = (
 			);
@@ -140,9 +171,6 @@
 			);
 			dependencies = (
 				BCEBF8192E2B06E600DFF723 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				BCEBF81A2E2B06E600DFF723 /* hellotetrisUITests */,
 			);
 			name = hellotetrisUITests;
 			packageProductDependencies = (
@@ -532,7 +560,7 @@
 			};
 			name = Release;
 		};
-/* End XCBuildConfiguration section */
+/* End XCConfigurationList section */
 
 /* Begin XCConfigurationList section */
 		BCEBF7EF2E2B06E300DFF723 /* Build configuration list for PBXProject "hellotetris" */ = {
